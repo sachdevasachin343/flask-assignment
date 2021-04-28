@@ -5,6 +5,7 @@ FROM python:3.8-slim
 ENV PYTHONUNBUFFERED True
 # Copy local code to the container image.
 ARG BUILD_ID
+RUN echo $BUILD_ID
 ENV BUILD_ID=${BUILD_ID}
 ENV APP_HOME /app
 WORKDIR $APP_HOME
