@@ -1,4 +1,7 @@
 steps:
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: ['set', 'image', 'deployment/mydepl', 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA']
+  env: ['BUILD=$BUILD_ID', 'PROJECT_ID=$PROJECT_ID', 'PROJECT_NUMBER=$PROJECT_NUMBER', 'REVISION_ID=$REVISION_ID', 'COMMIT_SHA=$COMMIT_SHA']
 
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
@@ -23,6 +26,4 @@ steps:
   - 'managed'
 images:
 - 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA'
-options:
-  env: ['BUILD=$BUILD_ID', 'PROJECT_ID=$PROJECT_ID', 'PROJECT_NUMBER=$PROJECT_NUMBER', 'REVISION_ID=$REVISION_ID', 'COMMIT_SHA=$COMMIT_SHA']
 
