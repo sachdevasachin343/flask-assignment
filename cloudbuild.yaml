@@ -3,6 +3,8 @@ steps:
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--build-args', 'BUILD_ID=${_DEPLOY_REGION}', '-t', 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA', '.']
+  env:
+    - 'BUILD_ID=${_DEPLOY_REGION}'
 
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
