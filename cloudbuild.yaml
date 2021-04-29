@@ -14,7 +14,7 @@ steps:
   args:
   - 'run'
   - 'deploy'
-  - 'flask-assigment'
+  - 'flask-assignment'
   - '--image'
   - 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA'
   - '--region'
@@ -28,7 +28,7 @@ steps:
   - 'run'
   - 'services'
   - 'update'
-  - 'flask-assigment'
+  - 'flask-assignment'
   - '--update-env-vars'
   - 'BUILD_ID="XYZ"'
 
