@@ -16,7 +16,7 @@ steps:
   - 'deploy'
   - 'flask-assignment'
   - '--set-env-vars'
-  - 'BUILD_ID="XYZ"'
+  - 'BUILD_ID=XYZ'
   - '--image'
   - 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA'
   - '--region'
