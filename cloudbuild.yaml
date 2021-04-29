@@ -23,6 +23,8 @@ steps:
   - 'asia-south1'
   - '--platform'
   - 'managed'
+  env:
+  - 'BUILD_ID=xyz'
 
 images:
 - 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA'
