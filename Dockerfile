@@ -11,7 +11,7 @@ ENV APP_HOME /app
 WORKDIR $APP_HOME
 COPY . ./
 
-RUN /bin/bash -c "source ./set_env.sh"
+# RUN /bin/bash -c "source ./set_env.sh"
 # Install production dependencies.
 RUN pip install Flask gunicorn
 RUN printenv
