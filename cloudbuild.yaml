@@ -15,22 +15,14 @@ steps:
   - 'run'
   - 'deploy'
   - 'flask-assignment'
+  - '--set-env-vars'
+  - 'BUILD_ID="XYZ"'
   - '--image'
   - 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA'
   - '--region'
   - 'asia-south1'
   - '--platform'
   - 'managed'
-
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  entrypoint: gcloud
-  args:
-  - 'run'
-  - 'services'
-  - 'update'
-  - 'flask-assignment'
-  - '--update-env-vars'
-  - 'BUILD_ID="XYZ"'
 
 images:
 - 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA'
