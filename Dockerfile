@@ -4,7 +4,7 @@ FROM python:3.8-slim
 # Allow statements and log messages to immediately appear in the Knative logs
 ENV PYTHONUNBUFFERED True
 # Copy local code to the container image.
-ARG BUILD_ID
+ARG BUILD_ID=abc
 RUN echo $BUILD_ID
 ENV APP_HOME /app
 WORKDIR $APP_HOME
