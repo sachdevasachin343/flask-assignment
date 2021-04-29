@@ -14,6 +14,5 @@ def hello_world():
         "PROJECT_ID": proj_id ,
         "PROJECT_NUMBER": proj_number, 
         "BUILD_ID": build_id,
-        "COMMIT_SHA": commit_sha ,
-        "REVISION_ID": revision_id
+        "COMMIT_SHA": commit_sha
     }
