@@ -1,5 +1,8 @@
 steps:
 
+- name: 'ubuntu'
+  args: ['-c', 'echo $PROJECT_ID']
+
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '--build-arg', 'BUILD_ID="abc"', '-t', 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA', '.']
