@@ -24,4 +24,4 @@ steps:
 images:
 - 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA'
 substitutions:
-    _BUILD_ID: abc # default value
+    _BUILD_ID: xyz # default value
