@@ -2,7 +2,7 @@ steps:
 
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--build-arg', 'BUILD_ID=${BUILD_ID}', '-t', 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA', '.', '--no-cache']
+  args: ['build', '--build-arg', 'BUILD_ID=${_BUILD_ID}', '-t', 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA', '.', '--no-cache']
 
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
@@ -24,4 +24,4 @@ steps:
 images:
 - 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA'
 substitutions:
-    BUILD_ID: abc # default value
+    _BUILD_ID: abc # default value
