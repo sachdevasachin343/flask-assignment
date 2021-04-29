@@ -21,8 +21,17 @@ steps:
   - 'asia-south1'
   - '--platform'
   - 'managed'
+
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args:
+  - 'run'
+  - 'services'
+  - 'update'
+  - 'flask-assigment'
   - '--update-env-vars'
-  - 'BUILD_ID="xyz"'
+  - 'BUILD_ID="XYZ"'
+
 images:
 - 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA'
 substitutions:
