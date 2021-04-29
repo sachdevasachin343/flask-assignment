@@ -11,7 +11,7 @@ def hello_world():
     revision_id = os.getenv("REVISION_ID")
 
     return {
-        "PROJECT_ID1": proj_id ,
+        "PROJECT_ID": proj_id ,
         "PROJECT_NUMBER": proj_number, 
         "BUILD_ID": build_id,
         "COMMIT_SHA": commit_sha
