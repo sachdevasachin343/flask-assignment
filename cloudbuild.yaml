@@ -5,7 +5,7 @@ steps:
   env:
     - 'BUILD_ID=abc'
   entrypoint: 'bash'
-  args: ['-c', 'docker build -t gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA . --build-arg BUILD_ID=abc']
+  args: ['-c', 'docker build -t gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA . --build-arg "BUILD_ID=abc"']
 
 # Push the container image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
