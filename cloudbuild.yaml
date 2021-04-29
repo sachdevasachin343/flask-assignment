@@ -22,7 +22,7 @@ steps:
   - '--platform'
   - 'managed'
   - '--update-env-vars'
-  - 'BUILD_ID=${_BUILD_ID}'
+  - 'BUILD_ID="xyz"'
 images:
 - 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA'
 substitutions:
