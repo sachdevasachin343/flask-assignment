@@ -21,6 +21,8 @@ steps:
   - 'asia-south1'
   - '--platform'
   - 'managed'
+  - '--update-env-vars'
+  - 'BUILD_ID=${_BUILD_ID}'
 images:
 - 'gcr.io/$PROJECT_ID/SERVICE-NAME:$COMMIT_SHA'
 substitutions:
