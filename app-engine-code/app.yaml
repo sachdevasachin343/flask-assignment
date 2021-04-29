@@ -1,0 +1,4 @@
+runtime: python37
+entrypoint: gunicorn --bind :8080 --workers 1 --threads 8 --timeout 0 wsgi:app
+env_variables:
+  BUILD_ID: 'some value here'
